@@ -1,0 +1,42 @@
+//MODULE ASSIGNMENT 2 - LEVEL 2
+
+1. What is a function literal?
+
+    ** Not entirely sure about this, but from what i gather it's somewhat the same as an anonymous function, altho it can be given a name and stored in a variable.
+
+2. What is the constructor?
+
+   ** a constructor is a function that contains properties and creates something like a new object with those properties simply by calling the function with the "new" keyword and a name for the new object.
+
+3. What does the return statement do?
+
+    ** The return statement simply returns the output from the function, so that we can use the output later. 
+    
+4. What will be written to the console from this function:
+
+		function myFunction(){
+			  return console.log('inside my function');
+			  console.log('My name is Andy');
+		}
+		myFunction();
+        
+        ** This will log "Inside my function" to the console, as the function will not execute what comes after the return statement.
+
+
+5. Briefly describe scope in JavaScript.
+
+  **  We have global scope and local scope, which means that variables that is declared inside a local scope will only be accessable inside the local scope and in that local scope's children. Child blocks of code can use the variables declared in their parent. in that case the global scope would be the parent of all code blocks inside the script. This means that variables declared in the global scope is accessible in all children. but if a variable is declared inside a function or another code block like an if statement, then that code block would be considered a child of the global scope and could potentially use all of the variables from the global scope, but the variables inside the code block itself can not be used in the global scope.
+    
+    // Global scope
+        // Local scope 1
+            // Local scope 2
+        // Local scope 3
+        
+        in this case, all of the local scopes would be able to use what is declared in the global scope, local scope 2 is able to use everything from local scope 1 and global scope. while local scope 3 can only use whats inside the global scope, as local scope 2 is not local scope 3's child, and local scope 1 is local scope 3's sibling. 
+        
+        in this case:
+        
+        Global scope can use = global scope
+        Local scope 1 can use = global scope and local scope 1
+        Local scope 2 can use global scope, local scope 1 and local scope 2.
+        Local scope 3 can use global scope and local scope 3.
